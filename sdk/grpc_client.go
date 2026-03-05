@@ -5,9 +5,9 @@ import ( // 引入包
   "errors" // 错误处理
   "strings" // 字符处理
   "google.golang.org/grpc" // gRPC
-  commonv1 "gopkg.inshopline.com/armor/pic-watermark/sdk/gen/common/v1" // 公共协议
-  controlplanev1 "gopkg.inshopline.com/armor/pic-watermark/sdk/gen/controlplane/v1" // 控制面协议
-  enginev1 "gopkg.inshopline.com/armor/pic-watermark/sdk/gen/engine/v1" // 引擎协议
+  commonv1 "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/common/v1" // 公共协议
+  controlplanev1 "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/controlplane/v1" // 控制面协议
+  enginev1 "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/engine/v1" // 引擎协议
 ) // 引入包结束
 
 var errPolicyClientMissing = errors.New("policy client not set") // 策略客户端缺失
