@@ -22,15 +22,15 @@ find . -type f -name "*.proto" | while read f; do
   
   cmd="protoc \
     --proto_path=. \
-    --go_out=../gen/ \
+    --go_out=../proto/gen/ \
     --go_opt=module=$module_path \
     --go_opt=M$f_rel=$module_path/$dir \
-    --go-grpc_out=require_unimplemented_servers=false:../gen/ \
+    --go-grpc_out=require_unimplemented_servers=false:../proto/gen/ \
     --go-grpc_opt=module=$module_path \
     --go-grpc_opt=M$f_rel=$module_path/$dir \
     $f_rel"
   echo command="$cmd"
 
-  mkdir -p ../gen/"$dir"
+  mkdir -p ../proto/gen/"$dir"
   eval "$cmd"
 done

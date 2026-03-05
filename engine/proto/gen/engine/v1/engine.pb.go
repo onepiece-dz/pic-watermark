@@ -9,7 +9,7 @@ package enginev1
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	v1 "gopkg.inshopline.com/armor/pic-watermark/proto/common/v1"
+	v1 "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/common/v1"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -400,7 +400,7 @@ const file_engine_v1_engine_proto_rawDesc = "" +
 	"\rEngineService\x12N\n" +
 	"\x05Embed\x12!.watermark.engine.v1.EmbedRequest\x1a\".watermark.engine.v1.EmbedResponse\x12T\n" +
 	"\aExtract\x12#.watermark.engine.v1.ExtractRequest\x1a$.watermark.engine.v1.ExtractResponse\x12Q\n" +
-	"\x06Verify\x12\".watermark.engine.v1.VerifyRequest\x1a#.watermark.engine.v1.VerifyResponseBCZAgopkg.inshopline.com/armor/pic-watermark/proto/engine/v1;enginev1b\x06proto3"
+	"\x06Verify\x12\".watermark.engine.v1.VerifyRequest\x1a#.watermark.engine.v1.VerifyResponseBNZLgopkg.inshopline.com/armor/pic-watermark/engine/gen/proto/engine/v1;enginev1b\x06proto3"
 
 var (
 	file_engine_v1_engine_proto_rawDescOnce sync.Once

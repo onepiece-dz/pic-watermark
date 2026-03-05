@@ -9,7 +9,7 @@ package controlplanev1
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	v1 "gopkg.inshopline.com/armor/pic-watermark/proto/common/v1"
+	v1 "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/common/v1"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -287,7 +287,7 @@ const file_controlplane_v1_policy_proto_rawDesc = "" +
 	"\rPolicyService\x12]\n" +
 	"\x06Decide\x12(.watermark.controlplane.v1.PolicyRequest\x1a).watermark.controlplane.v1.PolicyResponse2k\n" +
 	"\fAuditService\x12[\n" +
-	"\x06Report\x12'.watermark.controlplane.v1.AuditRequest\x1a(.watermark.controlplane.v1.AuditResponseBOZMgopkg.inshopline.com/armor/pic-watermark/proto/controlplane/v1;controlplanev1b\x06proto3"
+	"\x06Report\x12'.watermark.controlplane.v1.AuditRequest\x1a(.watermark.controlplane.v1.AuditResponseBZZXgopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/controlplane/v1;controlplanev1b\x06proto3"
 
 var (
 	file_controlplane_v1_policy_proto_rawDescOnce sync.Once

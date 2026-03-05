@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package watermark.engine.v1;
 
-option go_package = "gopkg.inshopline.com/armor/pic-watermark/proto/engine/v1;enginev1";
+option go_package = "gopkg.inshopline.com/armor/pic-watermark/engine/gen/proto/engine/v1;enginev1";
 
 import "common/v1/common.proto";
 

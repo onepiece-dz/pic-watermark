@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package watermark.common.v1;
 
-option go_package = "gopkg.inshopline.com/armor/pic-watermark/proto/common/v1;commonv1";
+option go_package = "gopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/common/v1;commonv1";
 
 message ImageInput {
   oneof source {

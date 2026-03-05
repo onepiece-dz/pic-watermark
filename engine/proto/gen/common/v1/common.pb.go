@@ -516,7 +516,7 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"strategyId\x12%\n" +
 	"\x0eenable_visible\x18\x02 \x01(\bR\renableVisible\x12=\n" +
 	"\aoverlay\x18\x03 \x01(\v2#.watermark.common.v1.VisibleOverlayR\aoverlay\x12>\n" +
-	"\bstrength\x18\x04 \x01(\v2\".watermark.common.v1.EmbedStrengthR\bstrengthBCZAgopkg.inshopline.com/armor/pic-watermark/proto/common/v1;commonv1b\x06proto3"
+	"\bstrength\x18\x04 \x01(\v2\".watermark.common.v1.EmbedStrengthR\bstrengthBNZLgopkg.inshopline.com/armor/pic-watermark/engine/proto/gen/common/v1;commonv1b\x06proto3"
 
 var (
 	file_common_v1_common_proto_rawDescOnce sync.Once
