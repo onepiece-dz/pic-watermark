@@ -21,7 +21,7 @@ def _run_protoc(proto_dir: Path, out_dir: Path, mappings: dict[str, str], proto_
   return result.returncode  # 返回退出码
 def main() -> int:  # 主函数
   root = Path(__file__).resolve().parents[2]  # 定位仓库根目录
-  proto_dir = root / "engine/proto"  # 协议目录
+  proto_dir = root / "proto"  # 协议目录
   sdk_out = root / "sdk/gen"  # SDK 输出目录
   controlplane_out = root / "controlplane/gen"  # 控制面输出目录
   if not proto_dir.exists():  # 协议目录不存在
