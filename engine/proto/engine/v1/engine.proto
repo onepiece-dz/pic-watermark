@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package watermark.engine.v1;
+
+option go_package = "gopkg.inshopline.com/armor/pic-watermark/proto/engine/v1;enginev1";
+
+import "common/v1/common.proto";
+
+service EngineService {
+  rpc Embed(EmbedRequest) returns (EmbedResponse);
+  rpc Extract(ExtractRequest) returns (ExtractResponse);
+  rpc Verify(VerifyRequest) returns (VerifyResponse);
+}
+
+message EmbedRequest {
+  watermark.common.v1.ImageInput image = 1;
+  watermark.common.v1.WatermarkPayload payload = 2;
+  watermark.common.v1.EmbedOptions options = 3;
+  watermark.common.v1.TraceContext trace = 4;
+}
+
+message EmbedResponse {
+  watermark.common.v1.ImageOutput image = 1;
+  string watermark_id = 2;
+}
+
+message ExtractRequest {
+  watermark.common.v1.ImageInput image = 1;
+  watermark.common.v1.TraceContext trace = 2;
+}
+
+message ExtractResponse {
+  watermark.common.v1.WatermarkPayload payload = 1;
+  bool success = 2;
+  float confidence = 3;
+}
+
+message VerifyRequest {
+  watermark.common.v1.ImageInput image = 1;
+  watermark.common.v1.WatermarkPayload payload = 2;
+  watermark.common.v1.TraceContext trace = 3;
+}
+
+message VerifyResponse {
+  bool match = 1;
+  float confidence = 2;
+}

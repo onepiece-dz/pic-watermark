@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package watermark.controlplane.v1;
+
+option go_package = "gopkg.inshopline.com/armor/pic-watermark/proto/controlplane/v1;controlplanev1";
+
+import "common/v1/common.proto";
+
+service PolicyService {
+  rpc Decide(PolicyRequest) returns (PolicyResponse);
+}
+
+service AuditService {
+  rpc Report(AuditRequest) returns (AuditResponse);
+}
+
+message PolicyRequest {
+  watermark.common.v1.TraceContext trace = 1;
+  string image_id = 2;
+  string actor_role = 3;
+  string action = 4;
+}
+
+message PolicyResponse {
+  string policy_id = 1;
+  watermark.common.v1.WatermarkPayload payload = 2;
+  watermark.common.v1.EmbedOptions options = 3;
+}
+
+message AuditRequest {
+  watermark.common.v1.TraceContext trace = 1;
+  string policy_id = 2;
+  string watermark_id = 3;
+  bool success = 4;
+}
+
+message AuditResponse {
+  bool accepted = 1;
+}

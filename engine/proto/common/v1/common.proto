@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package watermark.common.v1;
+
+option go_package = "gopkg.inshopline.com/armor/pic-watermark/proto/common/v1;commonv1";
+
+message ImageInput {
+  oneof source {
+    bytes data = 1;
+    string uri = 2;
+  }
+  string mime_type = 3;
+}
+
+message ImageOutput {
+  bytes data = 1;
+  string mime_type = 2;
+}
+
+message TraceContext {
+  string request_id = 1;
+  string tenant_id = 2;
+  string actor_id = 3;
+  string scene = 4;
+  string timestamp = 5;
+}
+
+message WatermarkPayload {
+  bytes payload = 1;
+  string payload_format = 2;
+}
+
+message VisibleOverlay {
+  string text = 1;
+  float opacity = 2;
+  int32 font_size = 3;
+  string position = 4;
+}
+
+message EmbedStrength {
+  float robust = 1;
+  float visible = 2;
+}
+
+message EmbedOptions {
+  string strategy_id = 1;
+  bool enable_visible = 2;
+  VisibleOverlay overlay = 3;
+  EmbedStrength strength = 4;
+}

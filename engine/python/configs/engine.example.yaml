@@ -1,0 +1,9 @@
+server:
+  addr: ":50051"
+
+model:
+  path: "models/robust-v1"
+  format: "onnx"
+
+runtime:
+  threads: 4
