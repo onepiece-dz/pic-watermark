@@ -23,4 +23,4 @@
 
 ## 代码生成
 - Python 代码：`python engine/python/scripts/gen_protos.py`
-- Go 代码：`python engine/scripts/gen_protos_go.py`
+- Go 代码：`python engine/python/scripts/gen_protos_go.py`

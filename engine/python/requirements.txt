@@ -3,3 +3,16 @@ grpcio-tools
 protobuf
 onnxruntime
 opencv-python-headless
+Pillow
+numpy
+PyWavelets
+scipy
+randcrack
+blind_watermark
+invisible-watermark
+torch
+torchvision
+meta-seal
+timm
+pyt-ssim
+lpips
